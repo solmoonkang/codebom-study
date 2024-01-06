@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/algo_cs_study/algo_cs_study.iml" filepath="$PROJECT_DIR$/algo_cs_study/algo_cs_study.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/codebom-team-study.iml" filepath="$PROJECT_DIR$/.idea/codebom-team-study.iml" />
+    </modules>
+  </component>
+</project>
