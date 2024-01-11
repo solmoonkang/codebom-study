@@ -1,4 +1,4 @@
-package week1_study.hash;
+package week1_study;
 
 import java.util.HashMap;
 
