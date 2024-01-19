@@ -43,6 +43,21 @@ public class 의상 {
         return answer - 1;
     }
 
+    public int refactor_solution(String[][] clothes) {
+        HashMap<String, Integer> clothesCountByType = new HashMap<>();
+
+        for (String[] pair : clothes) {
+            String type = pair[1];
+            clothesCountByType.put(type, clothesCountByType.getOrDefault(type, 0) + 1);
+        }
+
+        int numCombinations = 1;
+        for (int count : clothesCountByType.values()) {
+            numCombinations *= (count + 1);
+        }
+        return numCombinations - 1;
+    }
+
     public static void main(String[] args) {
         의상 costume = new 의상();
         String[][] firstClothes = {
