@@ -1,4 +1,4 @@
-package algo.week1_study;
+package algo.week1;
 
 import java.util.HashMap;
 import java.util.Map;

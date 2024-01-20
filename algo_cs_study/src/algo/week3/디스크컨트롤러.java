@@ -1,4 +1,4 @@
-package algo.week3_study;
+package algo.week3;
 
 public class 디스크컨트롤러 {
 }

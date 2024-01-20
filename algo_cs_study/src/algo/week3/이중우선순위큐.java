@@ -1,4 +1,4 @@
-package algo.week3_study;
+package algo.week3;
 
 import java.util.Arrays;
 import java.util.Collections;

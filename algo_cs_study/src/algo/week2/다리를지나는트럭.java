@@ -1,4 +1,4 @@
-package algo.week2_study;
+package algo.week2;
 
 import java.util.Deque;
 import java.util.LinkedList;
