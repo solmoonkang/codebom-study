@@ -105,20 +105,22 @@ OSI 모델은 국제표준화기구(ISO)에서 개발한 모델로 네트워크 
     - 모듈화: 각 계층은 자신에게 주어진 역할에만 집중하며, 다른 계층과 상호작용함으로써 네트워크 기능을 제공한다.
     - 상호운용성: 서로 다른 종류의 하드웨어와 소프트웨어 사이에서도 효과적인 통신을 가능하게 한다.
 
-    - ❗️ 프로토콜 스택이 계층화된 구조로 되어 있는 이유
-        프로토콜 스택의 계층화된 구조 덕분에 각 프로토콜이 독립적으로 동작할 수 있고, 하나의 계층에서 문제가 발생해도 다른 계층에 영향을 미치지 않는다는 이점이 있다.
-        
-    
-    **[ OSI 7 계층별 프로토콜 ]**
-    
-    | OSI LAYERS                    | PROTOCOLS                     |
-    | APPLICATION LAYER, 응용 계층    | HTTP, FTP, IRC, SSH, DNS      |
-    | PRESENTATION LAYER, 표현 계층   | SSL, FTP, IMAP, SSH           |
-    | SESSION LAYER, 세션 계층        | VARIOUS API’S, SOCKETS        |
-    | TRANSPORT LAYER, 전송 계층      | TCP, UDP, ECN, SCTP, DCCP     |
-    | NETWORK LAYER, 네트워크 계층     | IP, IPSec, ICMP, IGMP         |
-    | DATA-LINK LAYER, 데이터-링크 계층 | Ethernet, SLIP, PPP, FDDI     |
-    | PHYSICAL LAYER, 물리 계층       | Coax, Fiber, Wireless         |
+<details>
+<summary>❗️ 프로토콜 스택이 계층화된 구조로 되어 있는 이유</summary>
+프로토콜 스택의 계층화된 구조 덕분에 각 프로토콜이 독립적으로 동작할 수 있고, 하나의 계층에서 문제가 발생해도 다른 계층에 영향을 미치지 않는다는 이점이 있다.
+</details>
+
+[ OSI 7 계층별 프로토콜 ]
+
+| OSI LAYERS | PROTOCOLS |
+|------------|-----------|
+| APPLICATION LAYER, 응용 계층 | HTTP, FTP, IRC, SSH, DNS |
+| PRESENTATION LAYER, 표현 계층 | SSL, TLS, FTP, IMAP, SSH |
+| SESSION LAYER, 세션 계층 | VARIOUS API’S, SOCKETS |
+| TRANSPORT LAYER, 전송 계층 | TCP, UDP, ECN, SCTP, DCCP |
+| NETWORK LAYER, 네트워크 계층 | IP, IPSec, ICMP, IGMP |
+| DATA-LINK LAYER, 데이터-링크 계층 | Ethernet, SLIP, PPP, FDDI |
+| PHYSICAL LAYER, 물리 계층 | Coax, Fiber, Wireless |
 
     📌 다양한 계층의 프로토콜들을 모두 합해서 '프로토콜 스택'이라고 한다.
 </details>
