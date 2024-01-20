@@ -1,4 +1,4 @@
-package week2_study;
+package algo.week2_study;
 
 import java.util.*;
 
