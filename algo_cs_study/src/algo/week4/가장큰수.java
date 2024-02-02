@@ -29,8 +29,8 @@ public class 가장큰수 {
      * 4. 만약 가장 큰 수가 0으로 시작한다면 그 수는 0이므로, 결과가 "0"이라면 "0"을 반환합니다. 그렇지 않다면 만들어진 문자열을 반환합니다. ⭕️
      */
     public String solution(int[] numbers) {
-        // TODO: 다시 한 번 더 풀어보기.
         String[] strNumbers = new String[numbers.length];
+
         for (int i = 0; i < numbers.length; i++) {
             strNumbers[i] = String.valueOf(numbers[i]);
         }
@@ -46,7 +46,10 @@ public class 가장큰수 {
         for (String strNumber: strNumbers) {
             builder.append(strNumber);
         }
+
         return builder.toString();
+
+        // return strNumbers[0].equals("0") ? "0" : Arrays.stream(strNumbers).collect(Collectors.joining(""));
     }
 
     public static void main(String[] args) {
