@@ -1,4 +1,4 @@
-package algo.week3;
+package algorithm.week3;
 
 import java.util.Arrays;
 import java.util.Comparator;

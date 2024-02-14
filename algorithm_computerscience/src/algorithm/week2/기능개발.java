@@ -1,4 +1,4 @@
-package algo.week2;
+package algorithm.week2;
 
 import java.util.*;
 

@@ -1,4 +1,4 @@
-package algo.week5;
+package algorithm.week5;
 
 public class 피로도 {
 

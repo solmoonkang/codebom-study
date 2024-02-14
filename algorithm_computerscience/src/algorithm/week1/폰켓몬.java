@@ -1,4 +1,4 @@
-package algo.week1;
+package algorithm.week1;
 
 import java.util.HashSet;
 

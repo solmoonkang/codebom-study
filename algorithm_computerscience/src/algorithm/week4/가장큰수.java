@@ -1,4 +1,4 @@
-package algo.week4;
+package algorithm.week4;
 
 import java.util.Arrays;
 
