@@ -39,8 +39,9 @@
 
 ## 📑 스터디 진행 방식
 
-- 알고리즘의 경우 프로그래머스 고득점 Kit의 4문제를 각자 한 파트씩 맡아서 진행합니다.
-- 네트워크의 경우 WeareSoft Tech Interview를 토대로 2개의 주제를 정해서 2명이 파트를 맡아서 진행합니다.
+- 알고리즘의 경우 [프로그래머스 고득점 Kit]의 4문제를 각자 한 파트씩 맡아서 진행합니다. 자세한 내용은 [여기](https://school.programmers.co.kr/learn/challenges?tab=algorithm_practice_kit)를 눌러주세요.
+
+- 네트워크의 경우 [WeareSoft Tech Interview]를 토대로 2개의 주제를 정해서 2명이 파트를 맡아서 진행합니다. 자세한 내용은 [여기](https://github.com/WeareSoft/tech-interview)를 눌러주세요.
 
 <br>
 
