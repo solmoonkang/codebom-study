@@ -19,8 +19,20 @@ public class 카펫 {
      * 카펫의 가로 길이는 세로 길이와 같거나, 세로 길이보다 깁니다.
      */
     public int[] solution(int brown, int yellow) {
-        int[] answer = {};
-        return answer;
+        // TODO: 문제는 이해했지만, 풀이 과정이 이해되지 않음. 다시 한 번 풀어보자.
+        int total = brown + yellow;
+
+        for (int width = total; width >= 3; width--) {
+            if (total % width == 0) {
+                int height = total / width;
+                if (height > width) continue;
+
+                if ((width - 2) * (height - 2) == yellow) {
+                    return new int[] {width, height};
+                }
+            }
+        }
+        return null;
     }
 
     public static void main(String[] args) {
