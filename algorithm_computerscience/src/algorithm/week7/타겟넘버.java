@@ -66,25 +66,23 @@ public class 타겟넘버 {
         int count = 0;
         int idx = 1;
         while (!deque.isEmpty()) {
-            int size = deque.size();  // 현재 레벨의 노드 개수
+            int size = deque.size();
 
             for (int i = 0; i < size; i++) {
                 int current = deque.pollFirst();
 
-                // 마지막 숫자까지 처리한 경우
                 if (idx == numbers.length) {
-                    // 결과가 타겟 넘버와 같다면 카운트 증가
                     if (current == target) {
                         count++;
                     }
-                } else { // 그렇지 않은 경우 다음 숫자를 더하거나 뺀 값을 덱에 넣음
+                } else {
                     deque.offerLast(current + numbers[idx]);
                     deque.offerLast(current - numbers[idx]);
                 }
             }
 
             if (idx != numbers.length) {
-                idx++; // 다음 숫자로 넘어감
+                idx++;
             }
         }
 
