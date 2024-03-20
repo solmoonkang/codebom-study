@@ -16,12 +16,10 @@ public class 멀리뛰기 {
      * n은 1 이상, 2000 이하인 정수입니다.
      */
     public long solution(int n) {
-        if (n == 1) return 1;
-        if (n == 2) return 2;
-
         long[] answer = new long[n + 1];
+
         answer[1] = 1;
-        answer[2] = 2;
+        if (n > 1) answer[2] = 2;
 
         for (int i = 3; i <= n; i++) {
             answer[i] = (answer[i - 1] + answer[i - 2]) % 1234567;
