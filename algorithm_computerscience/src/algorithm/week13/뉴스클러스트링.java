@@ -1,8 +1,9 @@
 package algorithm.week13;
 
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.List;
+import java.util.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.util.stream.IntStream;
 
 public class 뉴스클러스트링 {
 
@@ -169,6 +170,37 @@ public class 뉴스클러스트링 {
         return multiSet;
     }
 
+
+
+
+    public int solution2(String str1, String str2) {
+        // TODO: 스트림 응용 능력이 부족한 것 같다. 다시 한 번 풀어보자.
+        Map<String, Long> map1 = makeMultiSet2(str1);
+        Map<String, Long> map2 = makeMultiSet2(str2);
+
+        Set<String> unionKeys = new HashSet<>(map1.keySet());
+        unionKeys.addAll(map2.keySet());
+
+        long intersectionSize = unionKeys.stream()
+                .mapToLong(key -> Math.min(map1.getOrDefault(key, 0L), map2.getOrDefault(key, 0L)))
+                .sum();
+
+        long unionSize = unionKeys.stream()
+                .mapToLong(key -> Math.min(map1.getOrDefault(key, 0L), map2.getOrDefault(key, 0L)))
+                .sum();
+
+        double jaccard = unionSize == 0 ? 1 : (double) intersectionSize / unionSize;
+        return (int) (jaccard * 65536);
+    }
+
+    private Map<String, Long> makeMultiSet2(String str) {
+
+        return IntStream.range(0, str.length() - 1)
+                .mapToObj(i -> str.substring(i, i + 2).toUpperCase())
+                .filter(s -> s.matches("[A-Z]{2}"))
+                .collect(Collectors.groupingBy(Function.identity(), Collectors.counting()));
+    }
+
     public static void main(String[] args) {
         뉴스클러스트링 newsClustering = new 뉴스클러스트링();
 
@@ -176,5 +208,12 @@ public class 뉴스클러스트링 {
         System.out.println("newsClustering = " + newsClustering.solution("handshake", "shake hands"));
         System.out.println("newsClustering = " + newsClustering.solution("aa1+aa2", "AAAA12"));
         System.out.println("newsClustering = " + newsClustering.solution("E=M*C^2", "e=m*c^2"));
+
+
+        System.out.println("\n====================================\n");
+        System.out.println("newsClustering = " + newsClustering.solution2("FRANCE", "french"));
+        System.out.println("newsClustering = " + newsClustering.solution2("handshake", "shake hands"));
+        System.out.println("newsClustering = " + newsClustering.solution2("aa1+aa2", "AAAA12"));
+        System.out.println("newsClustering = " + newsClustering.solution2("E=M*C^2", "e=m*c^2"));
     }
 }
