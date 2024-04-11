@@ -111,13 +111,9 @@ public class 주차요금계산 {
 
     private int calculateFee(int totalMinutes, int[] fees) {
 
-        if (totalMinutes <= fees[0]) {
-            return fees[1];
-        } else {
-            int overTime = totalMinutes - fees[0];
-            int overFee = (int) (Math.ceil((double) overTime / fees[2]) * fees[3]);
-            return fees[1] + overFee;
-        }
+        return totalMinutes <= fees[0] ?
+                fees[1] :
+                (fees[1] + (int) Math.ceil((double) (totalMinutes - fees[0]) / fees[2]) * fees[3]);
     }
 
     public static void main(String[] args) {
